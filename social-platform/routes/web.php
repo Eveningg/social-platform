@@ -2,17 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
+// Route directing to landing page
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing_page');
+});
+
+// Route directing to users feed
+Route::get('/feed', function () {
+    return view('users.user_feed');
+});
+
+// Route directing to users profile
+Route::get('/profile', function () {
+    return view('users.user_profile');
 });
